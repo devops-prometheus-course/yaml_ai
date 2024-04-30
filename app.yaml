@@ -1,0 +1,14 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo-pod
+  labels:
+    app: demo
+spec:
+  containers:
+  - name: demo-container
+    image: gcr.io/k8s-k3s-418716/demo:v2.0.0
+    ports:
+    - name: http
+      containerPort: 8080
